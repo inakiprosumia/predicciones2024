@@ -26,7 +26,9 @@ const cartas = [
 ];
 
 const generarCartas = () => {
-  const cartasAleatorias = cartas.map((carta, index) => {
+  const cartasAleatorias = cartas.sort(() => Math.random() - 0.5).slice(0, 9);
+
+  const cartasHTML = cartasAleatorias.map((carta, index) => {
     return (
       <div class="carta" key={index}>
         <h2>{carta.titulo}</h2>
@@ -34,12 +36,7 @@ const generarCartas = () => {
     );
   });
 
-  document.querySelector(".cartas").innerHTML = cartasAleatorias.join("");
-};
-
-document.querySelector("#generar").addEventListener("click", generarCartas);
-
-  document.querySelector(".cartas").innerHTML = cartasAleatorias.join("");
+  document.querySelector(".cartas").innerHTML = cartasHTML.join("");
 };
 
 document.querySelector("#generar").addEventListener("click", generarCartas);
