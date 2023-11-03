@@ -38,3 +38,8 @@ const generarCartas = () => {
 };
 
 document.querySelector("#generar").addEventListener("click", generarCartas);
+
+  document.querySelector(".cartas").innerHTML = cartasAleatorias.join("");
+};
+
+document.querySelector("#generar").addEventListener("click", generarCartas);
