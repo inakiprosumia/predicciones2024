@@ -9,9 +9,10 @@ body {
 }
 
 .cartas {
+  width: 100%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .carta {
@@ -23,7 +24,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 button {
@@ -33,5 +34,6 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 }
+
 
 
