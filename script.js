@@ -28,31 +28,15 @@ const cartas = [
 const generarCartas = () => {
   const cartaAleatoria = cartas[Math.floor(Math.random())];
 
-  const cartasHTML = [
-    <div class="carta" key={0}>
-      <h2>{cartaAleatoria.titulo}</h2>
-    </div>,
-  ];
+  // Obtenemos el elemento DOM `#carta`
+  const cartaDiv = document.querySelector("#carta");
 
-  const cartasDiv = document.querySelector(".cartas");
-
-  // Obtenemos el ancho de la ventana del navegador
-  const anchoVentana = window.innerWidth;
-
-  // Calculamos el número de filas que se necesitan
-  const numeroFilas = Math.ceil(cartasHTML.length / anchoVentana / 2);
-
-  // Generamos el código HTML para las filas
-  const filasHTML = [];
-  for (let i = 0; i < numeroFilas; i++) {
-    filasHTML.push(
-      `<div class="fila">${cartasHTML.slice(i * 2, (i + 1) * 2).join("")}</div>`
-    );
-  }
-
-  // Asignamos el código HTML a la división de las cartas
-  cartasDiv.innerHTML = filasHTML.join("");
+  // Asignamos la carta generada al elemento DOM
+  cartaDiv.innerHTML = `<h2>${cartaAleatoria.titulo}</h2>`;
 };
+
+document.querySelector(".generar").addEventListener("click", generarCartas);
+
 
 
 
