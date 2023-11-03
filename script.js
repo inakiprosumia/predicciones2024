@@ -26,15 +26,13 @@ const cartas = [
 ];
 
 const generarCartas = () => {
-  const cartasAleatorias = cartas.sort(() => Math.random() - 0.5).slice(0, 9);
+  const cartaAleatoria = cartas[Math.floor(Math.random() * cartas.length)];
 
-  const cartasHTML = cartasAleatorias.map((carta, index) => {
-    return (
-      <div class="carta" key={index}>
-        <h2>{carta.titulo}</h2>
-      </div>
-    );
-  });
+  const cartasHTML = [
+    <div class="carta" key={0}>
+      <h2>{cartaAleatoria.titulo}</h2>
+    </div>,
+  ];
 
   const cartasDiv = document.querySelector(".cartas");
 
@@ -55,5 +53,6 @@ const generarCartas = () => {
   // Asignamos el código HTML a la división de las cartas
   cartasDiv.innerHTML = filasHTML.join("");
 };
+
 
 
