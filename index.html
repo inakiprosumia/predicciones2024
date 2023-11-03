@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Predicciones 2024</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Genera una carta aleatoria
+      function generarCarta() {
+        var palos = ["Corazones", "Diamantes", "Treboles", "Espadas"];
+        var caras = ["As", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "J", "Q", "K"];
+        var carta = palos[Math.floor(Math.random() * palos.length)] + " " + caras[Math.floor(Math.random() * caras.length)];
+        $("#carta").html(carta);
+      }
+
+      // Genera una carta aleatoria al hacer clic en el botón
+      $("button").click(generarCarta);
+    });
+  </script>
+  <div id="carta"></div>
+  <button id="generar">Generar</button>
+</body>
+</html>
