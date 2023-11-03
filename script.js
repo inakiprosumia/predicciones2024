@@ -26,7 +26,11 @@ const cartas = [
 ];
 
 const generarCartas = () => {
+  // Generamos una carta al azar
   const cartaAleatoria = cartas[Math.floor(Math.random())];
+
+  // Eliminamos la carta generada del array de cartas
+  cartas.splice(cartas.indexOf(cartaAleatoria), 1);
 
   // Obtenemos el elemento DOM `#carta`
   const cartaDiv = document.querySelector("#carta");
