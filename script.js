@@ -39,10 +39,3 @@ const generarCartas = () => {
   document.querySelector(".cartas").innerHTML = cartasHTML.join("");
 };
 
-document.querySelector("#generar").addEventListener("click", generarCartas);
-
-
-  document.querySelector(".cartas").innerHTML = cartasHTML.join("");
-};
-
-document.querySelector("#generar").addEventListener("click", generarCartas);
