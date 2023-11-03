@@ -32,14 +32,13 @@ const generarCartas = () => {
   // Eliminamos la carta generada del array de cartas
   cartas.splice(cartas.indexOf(cartaAleatoria), 1);
 
-  // Obtenemos el elemento DOM `#carta`
+  // Actualizamos el DOM
   const cartaDiv = document.querySelector("#carta");
-
-  // Asignamos la carta generada al elemento DOM
   cartaDiv.innerHTML = `<h2>${cartaAleatoria.titulo}</h2>`;
 };
 
 document.querySelector(".generar").addEventListener("click", generarCartas);
+
 
 
 
