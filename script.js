@@ -26,7 +26,7 @@ const cartas = [
 ];
 
 const generarCartas = () => {
-  const cartaAleatoria = cartas[Math.floor(Math.random() * cartas.length)];
+  const cartaAleatoria = cartas[Math.floor(Math.random())];
 
   const cartasHTML = [
     <div class="carta" key={0}>
@@ -53,6 +53,7 @@ const generarCartas = () => {
   // Asignamos el código HTML a la división de las cartas
   cartasDiv.innerHTML = filasHTML.join("");
 };
+
 
 
 
