@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-     <link rel="stylesheet" href="cartas-style.css" type="text/css" />
-  <title>Predicciones 2024</title>
+  <meta charset="UTF-8">
+  <title>Generador de cartas de predicciones</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Genera una carta aleatoria
-      function generarCarta() {
-        var palos = ["Corazones", "Diamantes", "Treboles", "Espadas"];
-        var caras = ["As", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "J", "Q", "K"];
-        var carta = palos[Math.floor(Math.random() * palos.length)] + " " + caras[Math.floor(Math.random() * caras.length)];
-        $("#carta").html(carta);
-      }
-
-      // Genera una carta aleatoria al hacer clic en el botón
-      $("button").click(generarCarta);
-    });
-  </script>
-  <div id="carta"></div>
-  <button id="generar">Generar</button>
+  <div class="container">
+    <h1>Generador de cartas de predicciones</h1>
+    <div class="cartas">
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+    </div>
+    <button id="generar">Generar cartas</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
